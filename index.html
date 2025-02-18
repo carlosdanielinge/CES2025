@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CES 2025 - Innovaciones Tecnológicas</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden; /* Evitar desplazamiento horizontal */
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 8px 0;
+            text-align: left;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        header h1 {
+            font-family: 'Georgia', serif;
+            margin-left: 20px;
+            font-size: 30px;
+            display: inline-block;
+        }
+        header p {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 16px;
+            margin-left: 20px;
+            margin-top: 5px;
+            display: inline-block;
+        }
+        nav {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline-block;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #f2a500;
+        }
+        section {
+            margin: 80px 20px 20px 20px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content div {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        .welcome-heading {
+            position: relative;
+            text-align: right;
+            font-family: 'Merriweather', serif;
+            font-weight: bold;
+            color: rgb(255, 4, 171);
+            margin-top: 100px;
+            margin-bottom: 20px;
+            background-image: url('ces.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            padding-right: 20px;
+        }
+        .welcome-heading::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        .welcome-heading h2 {
+            background-color: rgba(255, 255, 0, 0.7);
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 5px;
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3vw; /* Cambiado a una unidad relativa */
+        }
+        .welcome-text {
+            text-align: justify;
+            font-family: 'Times New Roman', serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .image-box {
+            position: relative;
+            width: 32%;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+        }
+        .image-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .image-box p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .image-box a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #f4f807;
+            color: rgb(252, 10, 200);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .image-box a:hover {
+            background-color: #0af8e4;
+        }
+
+        /* Media Queries para mejorar el diseño en dispositivos móviles */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+            header p {
+                font-size: 14px;
+            }
+            nav a {
+                font-size: 14px;
+                margin: 0 10px;
+            }
+            .welcome-heading h2 {
+                font-size: 5vw;
+            }
+            .welcome-text {
+                font-size: 16px;
+            }
+            .image-container {
+                flex-direction: column; /* Apilar las imágenes en dispositivos pequeños */
+                align-items: center;
+            }
+            .image-box {
+                width: 80%; /* Aumentar el tamaño de las imágenes en pantallas pequeñas */
+                margin: 10px 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 20px;
+            }
+            header p {
+                font-size: 12px;
+            }
+            nav a {
+                font-size: 12px;
+            }
+            .welcome-heading h2 {
+                font-size: 6vw;
+            }
+            .welcome-text {
+                font-size: 14px;
+            }
+            .image-box {
+                width: 90%; /* Aumentar aún más el tamaño de las imágenes en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CES 2025</h1>
+    <p>by Carlos Daniel Hernandez Nuñez</p>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="acerca.html">Acerca de CES</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<section class="content">
+    <div class="welcome-heading">
+        <h2>Bienvenidos a CES 2025</h2>
+    </div>
+
+    <div class="welcome-text">
+        <p>El CES (Consumer Electronics Show) 2025 es una de las ferias más importantes del mundo en cuanto a tecnología e innovación. Cada año, miles de empresas, diseñadores y creadores de tecnología se reúnen en Las Vegas para mostrar sus productos más recientes, desde gadgets hasta avances en inteligencia artificial, automóviles autónomos, dispositivos de salud, y mucho más. En esta edición, el CES promete ofrecer lo último en tendencias tecnológicas. Prepárate para explorar el futuro de la tecnología en el CES 2025.</p>
+    </div>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Ces-consumer-electronics-show-las-vegas-greg-bulla.jpg" alt="CES 2025 Imagen 1">
+            <p>En CES 2025, se mostrarán innovaciones impresionantes en dispositivos de consumo y tecnología avanzada. ¡Descubre más sobre los productos del futuro!</p>
+            <a href="acerca.html">Más sobre CES 2025</a>
+        </div>
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/CES_2022_LG%EC%A0%84%EC%9E%90_%EB%B6%80%EC%8A%A4_%EC%82%AC%EC%A7%84_%2851800464266%29.jpg" alt="CES 2025 Imagen 2">
+            <p>Los avances en realidad aumentada y dispositivos conectados dominarán este año. No te pierdas las demostraciones que te sorprenderán.</p>
+            <a href="contacto.html">Contactanos</a>
+        </div>
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/LGCES2010.jpg" alt="CES 2025 Imagen 3">
+            <p>Conoce las tendencias más recientes en automóviles eléctricos y sostenibilidad. El CES 2025 es el escaparate de la movilidad del futuro.</p>
+            <a href="acerca.html">Más sobre CES 2025</a>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
